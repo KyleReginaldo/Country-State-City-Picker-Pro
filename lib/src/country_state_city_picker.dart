@@ -107,22 +107,20 @@ class _CountryStateCityPickerState extends State<CountryStateCityPicker> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ///Country TextField (Hidden)
-        // TextField(
-        //   controller: widget.country,
-        //   onTap: () {
-        //     // Optionally allow user to change country
-        //     // _showDialog(context); // If you want to keep this.
-        //   },
-        //   decoration: widget.textFieldDecoration == null
-        //       ? defaultDecoration.copyWith(hintText: 'Select country')
-        //       : widget.textFieldDecoration
-        //           ?.copyWith(hintText: 'Select country'),
-        //   readOnly: true, // Hide it from the UI but it's still functional
-        //   enabled: false, // Country is fixed to India
-        // ),
+        TextField(
+          controller: widget.country,
+          onTap: () {
+            // Optionally allow user to change country
+            // _showDialog(context); // If you want to keep this.
+          },
+          decoration: widget.textFieldDecoration == null
+              ? defaultDecoration.copyWith(hintText: 'Select country')
+              : widget.textFieldDecoration
+                  ?.copyWith(hintText: 'Select country'),
+          readOnly: true, // Hide it from the UI but it's still functional
+          enabled: false, // Country is fixed to India
+        ),
 
-        ///State TextField with custom label
         TextField(
           controller: widget.state,
           onTap: () {
