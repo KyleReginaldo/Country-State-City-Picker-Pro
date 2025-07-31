@@ -41,13 +41,7 @@ class _CountryStateCityPickerState extends State<CountryStateCityPicker> {
     super.initState();
 
     // Set default country to India on initialization
-    widget.country.text = "India";
     _getCountry(); // Load the countries list
-
-    // Auto-load states for India by passing the India ID (assuming it's in your data)
-    _getState(
-      "101",
-    ); // Assuming '101' is the ID for India, replace with actual ID if needed
   }
 
   Future<void> _getCountry() async {
@@ -118,7 +112,7 @@ class _CountryStateCityPickerState extends State<CountryStateCityPicker> {
               : widget.textFieldDecoration
                   ?.copyWith(hintText: 'Select country'),
           readOnly: true, // Hide it from the UI but it's still functional
-          enabled: false, // Country is fixed to India
+          enabled: true, // Country is fixed to India
         ),
 
         TextField(
